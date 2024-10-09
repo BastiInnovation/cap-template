@@ -1,0 +1,19 @@
+{
+    "build": {
+        "target": ".",
+        "tasks": [
+            {
+                "for": "node-cf",
+                "src": "cds",
+                "options": {
+                    "model": [
+                        "srv"
+                    ]
+                }
+            }
+        ]
+    },
+    "odata": {
+        "version": "v4"
+    }
+}
