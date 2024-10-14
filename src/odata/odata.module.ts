@@ -16,7 +16,7 @@ export class OdataModule implements NestModule {
   async configure(_consumer: MiddlewareConsumer) {
     await cds
       .serve('SampleService')
-      .in(this.adapterHost.httpAdapter)
+      .in((this.adapterHost.httpAdapter as any))
       .from("cds")
       .at('/odata')
       .with(this.handler.serviceHandler);
