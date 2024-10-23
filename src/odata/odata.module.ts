@@ -20,5 +20,8 @@ export class OdataModule implements NestModule {
       .from("cds")
       .at('/odata')
       .with(this.handler.serviceHandler);
+      const csn = await cds.load('cds') .then (cds.minify)
+      cds.model = cds.compile.for.nodejs (csn)
   }
+  
 }
